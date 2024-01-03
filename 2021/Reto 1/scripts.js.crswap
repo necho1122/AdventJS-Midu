@@ -1,0 +1,45 @@
+function isValid(letter) {
+
+  const letterToArray = Array.from(letter);
+
+  let fisrtCol;
+  let secondCol;
+
+  for (let i = 0; i < letterToArray.length + 1; i++){
+    if (letterToArray[i] === '('){
+      fisrtCol = letterToArray.indexOf(letterToArray[i]);
+      break;
+    }
+  }
+
+  for (let i = 0; i < letterToArray.length + 1; i++){
+    if (letterToArray[i] === ')'){
+      secondCol = letterToArray.indexOf(letterToArray[i]);
+      break;
+    }
+  }
+
+  const giftBruto = letterToArray.slice(fisrtCol, secondCol + 1);
+
+  for (let i )
+
+  return giftBruto;
+}
+
+console.log(isValid("bici coche (balón) bici coche peluche"))
+
+
+
+/*const tablaValores = {
+  '.': 1,
+  ',': 5,
+  ':': 10,
+  ';': 50,
+  '!': 100
+};
+
+// Ejemplo de uso
+const miSimbolo = ';';
+const valorAsociado = tablaValores[miSimbolo];
+
+console.log(`El valor asociado al símbolo ${miSimbolo} es: ${valorAsociado}`);*/
